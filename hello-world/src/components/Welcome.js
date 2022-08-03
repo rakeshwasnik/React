@@ -1,8 +1,24 @@
+//class component
+
 import React, { Component } from 'react';
 
 class Welcome extends Component {
+
+    constructor () {
+        super()
+        this.state = {
+            message: 'Welcome Visitor'
+        }
+    }
+
+
     render() {
-        return <h1>Welcome {this.props.name} a.k.a. {this.props.heroname}</h1>
+        return (
+            <div>
+                <h1>{this.state.message}</h1>
+                <button>Subscribe</button>
+            </div>
+        )
     }
 }
 
